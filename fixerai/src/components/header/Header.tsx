@@ -1,4 +1,4 @@
-import userIcon from "../../assets/img/user.svg";
+import userIcon from "../../assets/img/img-avatar.svg";
 import {
   CommonLink,
   CommonLinkPages,
@@ -8,6 +8,7 @@ import {
   StyledHeader,
   StyledUl,
 } from "../../style/styles";
+import UserAvatar from "../user/UserAvatar";
 export default function Header() {
   return (
     <>
@@ -35,7 +36,7 @@ export default function Header() {
             <CommonLink to="/login">Log In</CommonLink>
             <CommonLink to="/cadastro">Cadastrar</CommonLink>
             <CommonLink to="/usuario">
-              <img src={userIcon} alt="Ícone de usuário" />
+              <UserAvatar width="45px" src={userIcon} />
             </CommonLink>
           </DivLinks>
         </Nav>

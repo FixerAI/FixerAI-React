@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import UserAvatar from "../components/user/UserAvatar";
 
 export const StyledHeader = styled.header`
   width: 100%;
@@ -46,6 +47,10 @@ export const CommonLink = styled(Link)`
     color: #000;
     text-decoration: underline;
   }
+`;
+
+export const StyledUserAvatar = styled(UserAvatar)<{ width: string }>`
+  width: ${(props) => props.width};
 `;
 
 export const StyledUl = styled.ul`
@@ -132,6 +137,34 @@ export const ButtonLink = styled(Link)`
   &:hover {
     background-color: #023e8a;
   }
+`;
+
+export const StyledClearBtn = styled.button`
+  width: 8rem;
+  height: 3.6rem;
+  background-color: #fff;
+  color: #e01717;
+  border: 1px solid #e01717;
+  border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+
+  &:hover {
+    background-color: #e01717;
+    color: #fff;
+    cursor: pointer;
+  }
+`;
+
+export const StyledInput = styled.input`
+  width: 100%;
+  height: 3.7rem;
+  border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-family: 1.6rem;
+  border: 1px solid #171717;
+  padding: 1rem;
+  outline: none;
 `;
 
 export const CadMain = styled.main`
@@ -339,5 +372,66 @@ export const LoginMain = styled.main`
 export const MainChat = styled.main`
   width: 100%;
   height: 100vh;
-  padding-inline-start: 80px;
+  padding-block-start: 8rem;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
+
+export const ChatMenu = styled.div`
+  display: flex;
+  width: 20%;
+  height: 100%;
+  background-color: #0266b7;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 10px;
+
+  .user-data {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    p {
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+`;
+
+export const ContentChat = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+
+  h1 {
+    font-size: 3.5rem;
+  }
+`;
+
+export const InteractChat = styled.div`
+  width: 80%;
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+
+  form {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+`;
+
