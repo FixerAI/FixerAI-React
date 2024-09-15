@@ -36,7 +36,7 @@ export default function Header() {
             <CommonLink to="/login">Log In</CommonLink>
             <CommonLink to="/cadastro">Cadastrar</CommonLink>
             <CommonLink to="/usuario">
-              <UserAvatar width="45px" src={userIcon} />
+              <UserAvatar width="45px" src={userIcon} alt="Ícone do usuário" />
             </CommonLink>
           </DivLinks>
         </Nav>

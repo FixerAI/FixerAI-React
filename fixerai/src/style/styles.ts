@@ -435,3 +435,67 @@ export const InteractChat = styled.div`
   }
 `;
 
+export const MainIntegrantes = styled.main`
+  width: 100%;
+  padding-block-start: 8rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+`;
+
+export const ContainerCards = styled.div`
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  gap: 10px;
+  justify-content: center;
+`;
+
+export const StyledCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 35rem;
+  height: auto;
+  background-color: #f5f5f5;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #0282db;
+  box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.75);
+  gap: 5px;
+  padding: 20px;
+
+  &:hover {
+    transform: scale(102%);
+    transition: 0.2s ease-in-out;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+`;
