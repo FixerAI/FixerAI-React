@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-import "../assets/fonts/Poppins-Regular.ttf";
+
 const GlobalStyle = createGlobalStyle`
+
   :root {
     font-size: 62.5%;
   }
@@ -10,12 +11,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body{
-      font-family: Poppins, sans-serif;
+      font-family: "Poppins", sans-serif;
   }
-
-@font-face {
-  font-family: Poppins;
-  src: url("../assets/fonts/Poppins-Regular.ttf");
-}
 `;
 export default GlobalStyle;
