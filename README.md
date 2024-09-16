@@ -1,5 +1,7 @@
 # FixerAI
 
+## Link da apresentação do projeto: https://youtu.be/s1_CTFGjdF0
+
 *O site foi desenvolvido utilizando React para estruturação geral, React Router DOM para o roteamento das páginas e styled-components para a estilização, trazendo uma experiência moderna, fluida e agradável para os usuários.*
 
 ### 🔧 Instalação do Projeto
