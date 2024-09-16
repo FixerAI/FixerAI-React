@@ -140,7 +140,8 @@ export const ButtonLink = styled(Link)`
 `;
 
 export const StyledClearBtn = styled.button`
-  width: 8rem;
+  width: fit-content;
+  padding-inline: 1rem;
   height: 3.6rem;
   background-color: #fff;
   color: #e01717;
@@ -152,6 +153,24 @@ export const StyledClearBtn = styled.button`
   &:hover {
     background-color: #e01717;
     color: #fff;
+    cursor: pointer;
+  }
+`;
+
+export const SubmitBtn = styled.button`
+  width: fit-content;
+  padding-inline: 1rem;
+  height: 3.6rem;
+  background-color: transparent;
+  border-radius: 0.4rem;
+  border: 0.15rem solid #fff;
+  font-size: 1.8rem;
+  color: #fff;
+
+  &:hover {
+    background-color: #023e8a;
+    color: #fff;
+    border: 0.15rem solid #fff;
     cursor: pointer;
   }
 `;
@@ -220,15 +239,6 @@ export const StyledForm = styled.form`
     }
   }
 
-  .inputs-section input {
-    width: 100%;
-    font-family: "Poppins", sans-serif;
-    padding: 0.8rem 0.6rem;
-    border-radius: 0.3rem;
-    border: none;
-    outline: none;
-  }
-
   .btns-form {
     display: flex;
     justify-content: center;
@@ -242,44 +252,12 @@ export const StyledForm = styled.form`
         cursor: pointer;
       }
     }
-
-    .reset-button {
-      width: 8.4rem;
-      height: 3.4rem;
-      background-color: #fff;
-      border-radius: 0.4rem;
-      border: 1.5px solid #e01717;
-      color: #e01717;
-      font-size: 1.8rem;
-
-      &:hover {
-        background-color: #e01717;
-        color: #fff;
-        border: 1px solid #fff;
-      }
-    }
-
-    .submit-button {
-      width: 11rem;
-      height: 3.6rem;
-      background-color: transparent;
-      border-radius: 0.4rem;
-      border: 0.15rem solid #fff;
-      font-size: 1.8rem;
-      color: #fff;
-
-      &:hover {
-        background-color: #23f26a;
-        color: #052610;
-        border: 0.15rem solid #052610;
-      }
-    }
   }
 `;
 
 export const LoginMain = styled.main`
   width: 100%;
-  height: auto;
+  height: 100vh;
   padding-top: 80px;
   display: flex;
   flex-direction: column;
@@ -319,6 +297,7 @@ export const LoginMain = styled.main`
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        align-items: center;
 
         .inputs-section {
           width: 100%;
@@ -326,43 +305,9 @@ export const LoginMain = styled.main`
           flex-direction: column;
           gap: 0.8rem;
         }
-
-        .inputs-section input {
-          width: 100%;
-          height: 3.8rem;
-          padding: 0 10px;
-          border-radius: 4px;
-          border: 1px solid #0282db;
-          font-family: "Poppins", sans-serif;
-          font-size: 14px;
-        }
-
         .inputs-section label {
           font-size: 1.4rem;
           color: #fff;
-        }
-
-        .submit-section {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-
-          button {
-            width: 100px;
-            font-size: 18px;
-            font-family: "Poppins", sans-serif;
-            background-color: transparent;
-            border: 1px solid #fff;
-            border-radius: 5px;
-            color: #fff;
-            padding: 5px 10px;
-            cursor: pointer;
-          }
-          button:hover {
-            border: 1px solid #fff;
-            transition: 0.5s ease-in-out;
-            box-shadow: inset 6.5em 0 0 0 #023e8a;
-          }
         }
       }
     }

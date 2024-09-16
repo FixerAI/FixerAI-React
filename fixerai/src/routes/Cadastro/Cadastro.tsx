@@ -1,4 +1,11 @@
-import { CadMain, CommonLink, StyledForm } from "../../style/styles";
+import { Input } from "../../components/input/Input";
+import {
+  CadMain,
+  CommonLink,
+  StyledClearBtn,
+  StyledForm,
+  SubmitBtn,
+} from "../../style/styles";
 
 export default function Cadastro() {
   return (
@@ -14,33 +21,31 @@ export default function Cadastro() {
               <label htmlFor="nomeCompleto" role="textbox">
                 Nome
               </label>
-              <input
-                type="text"
-                id="nomeCompleto"
+              <Input
                 name="nomeCompleto"
-                placeholder="Digite seu nome completo..."
-                required
-                aria-required="true"
+                id="nomeCompleto"
+                placeholder="Digite seu nome completo"
+                type="text"
               />
 
               <label htmlFor="dataNascimento" role="textbox">
                 Data de Nascimento
               </label>
-              <input
+              <Input
                 type="date"
                 id="dataNascimento"
                 name="dataNascimento"
-                required
                 aria-required="true"
+                required
               />
 
               <label htmlFor="email" role="textbox">
                 E-mail
               </label>
-              <input
+              <Input
                 type="email"
-                id="email"
                 name="email"
+                id="email"
                 placeholder="Digite seu email..."
                 required
                 aria-required="true"
@@ -49,10 +54,10 @@ export default function Cadastro() {
               <label htmlFor="telefone" role="textbox">
                 Telefone
               </label>
-              <input
+              <Input
                 type="tel"
-                id="telefone"
                 name="telefone"
+                id="telefone"
                 placeholder="Digite seu telefone..."
                 required
                 aria-required="true"
@@ -61,10 +66,10 @@ export default function Cadastro() {
               <label htmlFor="cpf" role="textbox">
                 CPF
               </label>
-              <input
+              <Input
                 type="text"
-                id="cpf"
                 name="cpf"
+                id="cpf"
                 placeholder="Digite seu CPF..."
                 required
                 aria-required="true"
@@ -72,10 +77,10 @@ export default function Cadastro() {
               <label htmlFor="senha" role="textbox">
                 Senha
               </label>
-              <input
+              <Input
                 type="password"
-                id="senha"
                 name="senha"
+                id="senha"
                 placeholder="Digite sua senha..."
                 required
                 aria-required="true"
@@ -84,22 +89,18 @@ export default function Cadastro() {
               <label htmlFor="confirmarSenha" role="textbox">
                 Confirmar Senha
               </label>
-              <input
+              <Input
                 type="password"
-                id="confirmarSenha"
                 name="confirmarSenha"
+                id="confirmarSenha"
                 placeholder="Confirme sua senha..."
                 required
                 aria-required="true"
               />
 
               <div className="btns-form">
-                <button className="reset-button" type="reset" role="button">
-                  Limpar
-                </button>
-                <button className="submit-button" type="submit" role="button">
-                  Cadastrar
-                </button>
+                <StyledClearBtn>{"Limpar"}</StyledClearBtn>
+                <SubmitBtn>{"Cadastrar"}</SubmitBtn>
               </div>
             </div>
           </StyledForm>

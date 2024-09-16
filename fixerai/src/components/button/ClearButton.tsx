@@ -1,14 +1,13 @@
-// import { StyledClearBtn } from "../../style/styles";
+import { StyledClearBtn } from "../../style/styles";
 
-// type ClearBtnProps = {
-//   content: string;
-//   type: string;
-// };
+type ClearBtnProps = {
+  content: string;
+};
 
-// export function ClearButton(props: ClearBtnProps) {
-//   return (
-//     <>
-//       <StyledClearBtn type="reset" content={props.content} />
-//     </>
-//   );
-// }
+export function ClearButton(props: ClearBtnProps) {
+  return (
+    <>
+      <StyledClearBtn type="reset">{props.content}</StyledClearBtn>
+    </>
+  );
+}

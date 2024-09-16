@@ -1,4 +1,5 @@
-import { CommonLink, LoginMain } from "../../style/styles";
+import { Input } from "../../components/input/Input";
+import { CommonLink, LoginMain, SubmitBtn } from "../../style/styles";
 export default function Login() {
   return (
     <>
@@ -13,30 +14,27 @@ export default function Login() {
                 <label htmlFor="input-email" id="login" role="textbox">
                   Email
                 </label>
-                <input
+                <Input
                   type="email"
-                  id="input-email"
                   name="input-email"
+                  id="input-email"
                   placeholder="Digite seu email..."
                   required
                   aria-required="true"
                 />
                 <label htmlFor="input-senha" id="senha" role="textbox">
-                  {" "}
-                  Senha{" "}
+                  Senha
                 </label>
-                <input
+                <Input
                   type="password"
-                  id="input-senha"
                   name="input-senha"
+                  id="input-senha"
                   placeholder="Digite sua senha..."
                   required
                   aria-required="true"
                 />
               </div>
-              <div className="submit-section">
-                <button type="submit">Entrar</button>
-              </div>
+              <SubmitBtn type="submit">Entrar</SubmitBtn>
             </form>
           </div>
         </div>
