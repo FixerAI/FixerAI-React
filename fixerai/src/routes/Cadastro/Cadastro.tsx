@@ -19,7 +19,9 @@ export default function Cadastro() {
           <StyledForm role="form">
             <div className="inputs-section">
               <h2 className="title-division">Dados Pessoais</h2>
-              <StyledLabel htmlFor="nomeCompleto">Nome</StyledLabel>
+              <StyledLabel color="#fff" htmlFor="nomeCompleto">
+                Nome
+              </StyledLabel>
               <Input
                 name="nomeCompleto"
                 id="nomeCompleto"
@@ -27,7 +29,7 @@ export default function Cadastro() {
                 type="text"
               />
 
-              <StyledLabel htmlFor="dataNascimento" role="textbox">
+              <StyledLabel color="#fff" htmlFor="dataNascimento" role="textbox">
                 Data de Nascimento
               </StyledLabel>
               <Input
@@ -38,7 +40,7 @@ export default function Cadastro() {
                 required
               />
 
-              <StyledLabel htmlFor="email" role="textbox">
+              <StyledLabel color="#fff" htmlFor="email" role="textbox">
                 E-mail
               </StyledLabel>
               <Input
@@ -50,7 +52,7 @@ export default function Cadastro() {
                 aria-required="true"
               />
 
-              <StyledLabel htmlFor="telefone" role="textbox">
+              <StyledLabel color="#fff" htmlFor="telefone" role="textbox">
                 Telefone
               </StyledLabel>
               <Input
@@ -62,7 +64,7 @@ export default function Cadastro() {
                 aria-required="true"
               />
 
-              <StyledLabel htmlFor="cpf" role="textbox">
+              <StyledLabel color="#fff" htmlFor="cpf" role="textbox">
                 CPF
               </StyledLabel>
               <Input
@@ -73,7 +75,7 @@ export default function Cadastro() {
                 required
                 aria-required="true"
               />
-              <StyledLabel htmlFor="senha" role="textbox">
+              <StyledLabel color="#fff" htmlFor="senha" role="textbox">
                 Senha
               </StyledLabel>
               <Input
@@ -85,7 +87,7 @@ export default function Cadastro() {
                 aria-required="true"
               />
 
-              <StyledLabel htmlFor="confirmarSenha" role="textbox">
+              <StyledLabel color="#fff" htmlFor="confirmarSenha" role="textbox">
                 Confirmar Senha
               </StyledLabel>
               <Input
@@ -99,7 +101,7 @@ export default function Cadastro() {
 
               <div className="btns-form">
                 <StyledClearBtn>{"Limpar"}</StyledClearBtn>
-                <SubmitBtn>{"Cadastrar"}</SubmitBtn>
+                <SubmitBtn background="#0266b7">{"Cadastrar"}</SubmitBtn>
               </div>
             </div>
           </StyledForm>

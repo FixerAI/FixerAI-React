@@ -1,3 +1,4 @@
+import Carros from "../../components/carros/Carros";
 import {
   InputsArea,
   SectionTitle,
@@ -90,7 +91,6 @@ export default function Usuario() {
               </div>
             </div>
 
-            {/* Endereço */}
             <div className="section">
               <SectionTitle>Endereço</SectionTitle>
               <div className="column">
@@ -163,7 +163,6 @@ export default function Usuario() {
               </div>
             </div>
 
-            {/* CNH */}
             <div className="section">
               <SectionTitle>CNH</SectionTitle>
               <div className="column">
@@ -219,7 +218,6 @@ export default function Usuario() {
               </div>
             </div>
 
-            {/* Senha */}
             <div className="section">
               <SectionTitle>Senha</SectionTitle>
               <div className="column">
@@ -261,6 +259,8 @@ export default function Usuario() {
           </div>
         </UserForm>
       </UserMain>
+
+      <Carros />
     </>
   );
 }

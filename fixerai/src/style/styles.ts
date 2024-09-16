@@ -16,6 +16,35 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (min-width: 768px) {
+    .hamburguer-icon {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    justify-content: space-between;
+  }
+`;
+
+export const MobileNav = styled.div`
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8rem;
+  right: 0;
+  background-color: #fff;
+  width: 100%;
+  height: fit-content;
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+  gap: 2rem;
+  @media (max-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const FixerLink = styled(Link)`
@@ -58,6 +87,10 @@ export const StyledUl = styled.ul`
   list-style: none;
   gap: 2.8rem;
   font-size: 1.6rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const DivLinks = styled.div`
@@ -67,6 +100,10 @@ export const DivLinks = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const StyledFooter = styled.footer`
@@ -182,9 +219,10 @@ export const StyledInput = styled.input`
   border-radius: 0.5rem;
   font-family: "Poppins", sans-serif;
   font-family: 1.6rem;
-  border: 1px solid #171717;
+  border: none;
   padding: 1rem;
   outline: none;
+  background-color: #f5f5f5;
 `;
 
 export const CadMain = styled.main`
@@ -501,4 +539,94 @@ export const SectionTitle = styled.h3`
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 10px;
+`;
+
+export const CarroMain = styled.main`
+  width: 100%;
+  height: auto;
+  padding-inline: 2rem;
+  padding-block: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .form-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 2rem;
+
+    .column {
+      text-align: left;
+    }
+  }
+`;
+
+export const CarroForm = styled.form`
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 0.8rem;
+  border: 1px solid #0266b7;
+  text-align: left;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  .button-area {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 2rem;
+  }
+`;
+
+export const ModalArea = styled.div`
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+`;
+
+export const Modal = styled.dialog`
+  z-index: 99;
+  width: 80%;
+  max-height: 100%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 0.8rem;
+`;
+
+export const CloseModalBtn = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
 `;
