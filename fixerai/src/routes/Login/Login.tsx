@@ -1,5 +1,11 @@
 import { Input } from "../../components/input/Input";
-import { CommonLink, LoginMain, SubmitBtn } from "../../style/styles";
+import {
+  CommonLink,
+  LoginMain,
+  StyledLabel,
+  SubmitBtn,
+} from "../../style/styles";
+
 export default function Login() {
   return (
     <>
@@ -11,9 +17,9 @@ export default function Login() {
           <div className="form-content">
             <form aria-labelledby="login-form">
               <div className="inputs-section">
-                <label htmlFor="input-email" id="login" role="textbox">
+                <StyledLabel htmlFor="input-email" color="#fff">
                   Email
-                </label>
+                </StyledLabel>
                 <Input
                   type="email"
                   name="input-email"
@@ -22,9 +28,9 @@ export default function Login() {
                   required
                   aria-required="true"
                 />
-                <label htmlFor="input-senha" id="senha" role="textbox">
+                <StyledLabel htmlFor="input-senha" color="#fff">
                   Senha
-                </label>
+                </StyledLabel>
                 <Input
                   type="password"
                   name="input-senha"
@@ -34,7 +40,9 @@ export default function Login() {
                   aria-required="true"
                 />
               </div>
-              <SubmitBtn type="submit">Entrar</SubmitBtn>
+              <SubmitBtn background="transparent" type="submit">
+                Entrar
+              </SubmitBtn>
             </form>
           </div>
         </div>

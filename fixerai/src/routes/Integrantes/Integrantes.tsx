@@ -1,7 +1,7 @@
 import imgDavi from "../../assets/img/img-foto-davi.jpeg";
 import imgJennifer from "../../assets/img/img-foto-jennifer.jpg";
 import imgPaulo from "../../assets/img/img-foto-paulo.jpg";
-import { Card } from "../../components/integrantes/Card";
+import { Card } from "../../components/card/Card";
 import { ContainerCards, MainIntegrantes } from "../../style/styles";
 export default function Integrantes() {
   return (

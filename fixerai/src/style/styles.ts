@@ -157,15 +157,16 @@ export const StyledClearBtn = styled.button`
   }
 `;
 
-export const SubmitBtn = styled.button`
+export const SubmitBtn = styled.button<{ background: string }>`
   width: fit-content;
   padding-inline: 1rem;
   height: 3.6rem;
-  background-color: transparent;
-  border-radius: 0.4rem;
-  border: 0.15rem solid #fff;
+  background-color: ${(props) => props.background};
+  border-radius: 0.5rem;
+  border: 1px solid #fff;
   font-size: 1.8rem;
   color: #fff;
+  font-family: "Poppins", sans-serif;
 
   &:hover {
     background-color: #023e8a;
@@ -305,13 +306,14 @@ export const LoginMain = styled.main`
           flex-direction: column;
           gap: 0.8rem;
         }
-        .inputs-section label {
-          font-size: 1.4rem;
-          color: #fff;
-        }
       }
     }
   }
+`;
+
+export const StyledLabel = styled.label<{ color: string }>`
+  font-size: 1.4rem;
+  color: ${(props) => props.color};
 `;
 
 export const MainChat = styled.main`
@@ -362,6 +364,10 @@ export const ContentChat = styled.div`
   h1 {
     font-size: 3.5rem;
   }
+`;
+
+export const Title = styled.h1`
+  font-size: 4rem;
 `;
 
 export const InteractChat = styled.div`
@@ -443,4 +449,56 @@ export const StyledCard = styled.div`
       border-radius: 50%;
     }
   }
+`;
+
+export const UserMain = styled.main`
+  width: 100%;
+  height: auto;
+  padding-inline: 2rem;
+  padding-block: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const UserForm = styled.form`
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  border-radius: 0.8rem;
+  border: 1px solid #0266b7;
+
+  .button-area {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
+export const InputsArea = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .section {
+    width: 48%;
+    margin-bottom: 20px;
+
+    .column {
+      text-align: left;
+      padding: 1rem;
+    }
+  }
+`;
+export const SectionTitle = styled.h3`
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 `;
