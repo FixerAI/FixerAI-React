@@ -1,6 +1,6 @@
 # FixerAI
 
-## O site foi desenvolvido utilizando React para estruturação geral, React Router DOM para o roteamento das páginas e styled-components para a estilização, trazendo uma experiência moderna, fluida e agradável para os usuários.
+*O site foi desenvolvido utilizando React para estruturação geral, React Router DOM para o roteamento das páginas e styled-components para a estilização, trazendo uma experiência moderna, fluida e agradável para os usuários.*
 
 ### 🔧 Instalação do Projeto
 * Clone ou baixe o projeto em sua máquina.
