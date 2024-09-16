@@ -12,7 +12,7 @@ export default function Chatbot() {
   return (
     <MainChat>
       <div className="container">
-        <ChatMenu>
+        <ChatMenu className="chat-menu">
           <div className="user-data">
             <UserAvatar width="50px" src={imgAvatar} alt="Ícone do usuário"/>
             <p>Joãozinho</p>

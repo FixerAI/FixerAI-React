@@ -211,7 +211,6 @@ export default function Usuario() {
                   required
                 >
                   <option value="">Selecione uma opção</option>
-                  <option value="A">A</option>
                   <option value="B">B</option>
                   <option value="AB">AB</option>
                 </StyledInput>
@@ -249,7 +248,7 @@ export default function Usuario() {
           </InputsArea>
 
           <div className="button-area">
-            <div>
+            <div className="subm-clear">
               <SubmitBtn background="#0282db" type="submit">
                 Salvar
               </SubmitBtn>

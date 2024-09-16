@@ -8,16 +8,18 @@ export const StyledHeader = styled.header`
   padding-inline: 4rem;
   position: fixed;
   background-color: #fff;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Nav = styled.nav`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     .hamburguer-icon {
       display: none;
     }
@@ -37,8 +39,7 @@ export const MobileNav = styled.div`
   right: 0;
   background-color: #fff;
   width: 100%;
-  height: fit-content;
-
+  height: 65vh;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   font-size: 1.8rem;
   gap: 2rem;
@@ -52,6 +53,7 @@ export const FixerLink = styled(Link)`
   text-decoration: none;
   font-size: 2.2rem;
   font-weight: 900;
+  width: 100%;
 
   .styled-title {
     color: #023e8a;
@@ -59,6 +61,7 @@ export const FixerLink = styled(Link)`
 `;
 
 export const CommonLinkPages = styled(Link)`
+  width: 100%;
   text-decoration: none;
   color: #000;
 
@@ -94,12 +97,12 @@ export const StyledUl = styled.ul`
 `;
 
 export const DivLinks = styled.div`
-  gap: 2.8rem;
+  gap: 2rem;
   font-size: 1.6rem;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+  width: 100%;
 
   @media (max-width: 768px) {
     display: none;
@@ -108,24 +111,30 @@ export const DivLinks = styled.div`
 
 export const StyledFooter = styled.footer`
   width: 100%;
-  height: 60px;
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   bottom: 0;
   font-size: 1.4rem;
   background-color: #fff;
+  text-align: center;
 `;
 
 export const MainContent = styled.main`
   width: 100%;
   height: 100vh;
-  padding-top: 80px;
+  padding-block: 8rem 2rem;
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-inline: 10rem;
+  padding-inline: 5rem;
+
+  @media (max-width: 768px) {
+    padding-inline: 2rem;
+    min-height: auto;
+  }
 
   .content {
     width: 100%;
@@ -133,30 +142,70 @@ export const MainContent = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    gap: 1rem;
 
-  .text-content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    h2 {
-      font-size: 3.5rem;
-      width: 100%;
+    @media (max-width: 768px) {
+      flex-direction: column;
     }
-    p {
-      font-size: 1.8rem;
-      font-weight: 300;
-      color: #171717;
-      width: 75%;
+
+    .text-content {
+      width: 60rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+
+      p {
+        font-weight: 300;
+        color: #171717;
+      }
+      @media (min-width: 768px) {
+        h2 {
+          font-size: 4rem;
+        }
+        p {
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (min-width: 465px) and (max-width: 768px) {
+        h2 {
+          font-size: 3.5rem;
+        }
+        p {
+          font-size: 1.6rem;
+        }
+      }
+      @media (max-width: 768px) {
+        align-items: center;
+        text-align: center;
+      }
+      @media (max-width: 465px) {
+        h2 {
+          font-size: 2.3rem;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
     }
   }
 
   .img-content {
-    max-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-width: 42rem;
     img {
-      max-width: 100%;
+      width: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    .img-content {
+      max-width: 30rem;
+      height: 100%;
     }
   }
 `;
@@ -173,6 +222,10 @@ export const ButtonLink = styled(Link)`
 
   &:hover {
     background-color: #023e8a;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -229,13 +282,15 @@ export const CadMain = styled.main`
   width: 100%;
   height: auto;
   padding-top: 8rem;
+  padding-bottom: 2rem;
+  padding-inline: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   .container {
-    width: 50%;
+    width: 50rem;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -247,8 +302,18 @@ export const CadMain = styled.main`
     padding: 3rem 10rem;
     gap: 3rem;
 
+    @media (max-width: 572px) {
+      width: 100%;
+      padding-inline: 2rem;
+    }
+
     .title-section h1 {
       font-size: 4rem;
+      text-align: center;
+
+      @media (max-width: 572px) {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -298,6 +363,7 @@ export const LoginMain = styled.main`
   width: 100%;
   height: 100vh;
   padding-top: 80px;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -306,9 +372,11 @@ export const LoginMain = styled.main`
   p {
     font-size: 1.4rem;
   }
-
+  @media (max-width: 768px) {
+    padding-inline: 2rem;
+  }
   .login {
-    width: 35%;
+    width: 35rem;
     height: 45rem;
     display: flex;
     flex-direction: column;
@@ -316,6 +384,13 @@ export const LoginMain = styled.main`
     background-color: #0282db;
     padding: 10px;
     border-radius: 8px;
+
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+    @media (min-width: 425px) and (max-width: 768px) {
+      width: 35rem;
+    }
 
     .title-form {
       color: #fff;
@@ -330,6 +405,7 @@ export const LoginMain = styled.main`
       align-items: center;
       justify-content: center;
       padding-inline: 2rem;
+
       form {
         width: 100%;
         height: 100%;
@@ -365,6 +441,11 @@ export const MainChat = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: start;
+    }
   }
 `;
 
@@ -389,6 +470,22 @@ export const ChatMenu = styled.div`
       color: #fff;
     }
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 14%;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+
+    .user-data {
+      justify-content: center;
+      gap: 2rem;
+      p {
+        color: #000;
+      }
+    }
+  }
 `;
 
 export const ContentChat = styled.div`
@@ -398,9 +495,20 @@ export const ContentChat = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+  text-align: center;
 
   h1 {
+    position: relative;
+    top: -4rem;
     font-size: 3.5rem;
+    z-index: -1;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+      top: 10rem;
+    }
   }
 `;
 
@@ -432,6 +540,7 @@ export const MainIntegrantes = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-inline: 2rem;
   gap: 2rem;
 
   h2 {
@@ -441,20 +550,29 @@ export const MainIntegrantes = styled.main`
   p {
     font-size: 1.6rem;
   }
+  @media (max-width: 768px) {
+    height: auto;
+    text-align: center;
+  }
 `;
 
 export const ContainerCards = styled.div`
   display: flex;
   width: 100%;
-  height: 70vh;
+  height: auto;
   gap: 10px;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
-  width: 35rem;
+  width: 100%;
   height: auto;
   background-color: #f5f5f5;
   align-items: center;
@@ -464,6 +582,11 @@ export const StyledCard = styled.div`
   box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.75);
   gap: 5px;
   padding: 20px;
+  text-align: center;
+
+  @media (min-width: 425px) and (max-width: 768px) {
+    width: 35rem;
+  }
 
   &:hover {
     transform: scale(102%);
@@ -510,10 +633,22 @@ export const UserForm = styled.form`
   text-align: center;
   border-radius: 0.8rem;
   border: 1px solid #0266b7;
+  box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.75);
 
   .button-area {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+
+      .subm-clear {
+        display: flex;
+        gap: 4rem;
+      }
+    }
   }
 `;
 
@@ -528,6 +663,10 @@ export const InputsArea = styled.div`
   .section {
     width: 48%;
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
 
     .column {
       text-align: left;
@@ -550,12 +689,18 @@ export const CarroMain = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
 
   .title-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
   }
   .form-section {
     width: 100%;
@@ -582,6 +727,7 @@ export const CarroForm = styled.form`
   background-color: #fff;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.75);
 
   h3 {
     font-size: 2.5rem;
@@ -597,6 +743,10 @@ export const CarroForm = styled.form`
     display: grid;
     grid-template-columns: 2fr 2fr;
     gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 `;
 

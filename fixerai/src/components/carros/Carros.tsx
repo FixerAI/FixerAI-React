@@ -32,7 +32,7 @@ export default function Carros() {
           </SubmitBtn>
         </div>
         <CarroForm>
-          <h3>Carro</h3>
+          <h3>BMW M3</h3>
           <div className="form-section">
             <div className="column">
               <StyledLabel htmlFor="placa" color="#000">
@@ -46,17 +46,17 @@ export default function Carros() {
                 disabled
               />
               <StyledLabel htmlFor="modelo" color="#000">
-                Placa
+                Modelo
               </StyledLabel>
               <StyledInput
                 name="modelo"
                 id="modelo"
                 type="text"
-                placeholder="Serie 3"
+                placeholder="M3"
                 disabled
               />
               <StyledLabel htmlFor="cor" color="#000">
-                Placa
+                Cor
               </StyledLabel>
               <StyledInput
                 name="cor"
